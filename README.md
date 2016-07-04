@@ -1,61 +1,54 @@
-# Pulse Express Msuic App
+# Pulse Express Music App
 
-## Running the apps
-Load up the terminal
+## How to start the server and font end.
+Load up terminal and go into your projects directory where you want to clone both of the repos.
 
-- How to start the server and app
-```
-cd
-```
-into your projects directory where you want to clone both of the repos.
-
-- clone the front end
+- Clone the front end.
 ```
 git clone https://github.com/guanwill/pulse-express.git
 ```
 
-- clone the back end
+- Clone the back end.
 ```
 git clone https://github.com/ctrlaltchris/pulse-express-front.git
 ```
 
-cd into the *pulse-express* backend directory.
+In the terminal, go into the *pulse-express* backend directory. (cd pulse-express).
 ```
 npm i
 ```
 
-- type:
+- Type:
 ```
 nodemon app.js
 ```
 
-- the server will run on **http://localhost:3000**
+- The server will run on **http://localhost:3000**.
 
 cd into the *pulse-express-front* directory.
 ```
 npm i
 ```
 
-- type:
+- Type:
 ```
 nodemon app.js
 ```
 
-- the server will run on **http://localhost:3001**
-- Click the play button and the visualizer will start playing.
+- The server will run on **http://localhost:3001**
 
 ## Running in the browser
-go to
+- Go to
 ```
 http://localhost:3001
 ```
 in your web browser.
 
-
-- log into github by clicking the top right *git* icon.
+- Log into github by clicking the top right *git* icon.
 
 - A logged in user can then upload songs by *choosing a file* and clicking the *upload* button.
 
+- Click the play button then the audio and visualizer will start playing.
 
 ## TODO:
 - Fix performance issues with the visualizer.
