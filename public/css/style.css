@@ -1,0 +1,18 @@
+body {
+    background: url(http://i.imgur.com/8FAYZ8d.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+i {
+    color: white;
+    position: absolute;
+    right: 10px;
+}
+
+.nav {
+    background-color: black;
+    height: 30px;
+}

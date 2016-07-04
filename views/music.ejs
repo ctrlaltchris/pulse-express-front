@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+    <script src="app.js"></script>
+    <script src="visuals.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <!-- Pixel font -->
+    <link href='https://fonts.googleapis.com/css?family=VT323' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+    <!-- for the color changing part -->
+    <!-- color change on the (non audio pages) - just kills the ram -->
+    <div id="background">
+    </div>
+
+    <!-- These are just killing the cpu -->
+    <!-- top grid flying in -->
+    <div class='grid-top'></div>
+
+    <!-- bottom grid flying in -->
+    <div class='grid-bottom'></div>
+
+    <!-- TODO: Fix the z-layer so buttons can be clicked -->
+    <div id="mp3_player">
+      <div id="audio_box"></div>
+      <canvas id="analyser_render"></canvas>
+    </div>
+
+    <form id="new-form">
+      <input id="file" type="file" name="uploads">
+      <button id="upload">Upload</button>
+    </form>
+
+  </body>
+</html>

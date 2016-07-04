@@ -3,9 +3,10 @@ session = require('express-session'),
 mongoose = require('mongoose'),
 passport = require('passport'),
 User = require('./models/user'),
-app = express();
+app = express(),
+GithubStrategy = require('passport-github').Strategy;
 
-var GithubStrategy = require('passport-github').Strategy;
+app.set('view engine', 'ejs');
 
 passport.use(new GithubStrategy({
     clientID: "68db031caf9e36804f74",
@@ -21,21 +22,18 @@ passport.use(new GithubStrategy({
 app.use(session({secret: "funkytown"}));
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(express.static(__dirname + '/public'));
 
 // main menu route
 app.get('/', function (req, res) {
-  var html = "<ul>\
-    <li><a href='/auth/github'>GitHub</a></li>\
-    <li><a href='/logout'>logout</a></li>\
-  </ul>";
-
+    res.render('index');
       // dump the user for debugging
-    if (req.isAuthenticated()) {
-      html += "<p>authenticated as user:</p>"
-      html += "<pre>" + JSON.stringify(req.user, null, 4) + "</pre>";
-    }
+    // if (req.isAuthenticated()) {
+    //   html += "<p>authenticated as user: </p>"
+    //   html += "<pre>" + JSON.stringify(req.user, null, 4) + "</pre>";
+    // }
 
-  res.send(html);
+  // res.send(html);
 });
 
 app.get('/logout', function(req, res){
@@ -50,7 +48,7 @@ app.get('/auth/github', passport.authenticate('github'));
 // GitHub will call this URL
 app.get('/auth/github/callback', passport.authenticate('github', { failureRedirect: '/' }),
   function(req, res) {
-    res.redirect('/');
+    res.redirect('/music');
   }
 );
 
@@ -65,11 +63,11 @@ function ensureAuthenticated(req, res, next) {
     return next(); }
 
   // denied. redirect to login
-  res.redirect('/')
+  res.redirect('/');
 }
 
-app.get('/protected', ensureAuthenticated, function(req, res) {
-  res.send("access granted. secure stuff happens here");
+app.get('/music', ensureAuthenticated, function(req, res) {
+  res.render('music');
 });
 
 
