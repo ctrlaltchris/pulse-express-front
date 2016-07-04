@@ -16,3 +16,153 @@ i {
     background-color: black;
     height: 30px;
 }
+
+
+//-------------/MUSIC--------------
+
+* {
+  font-family: 'VT323', Arial, serif; font-weight: 250;
+  color: white;
+}
+
+element.style {
+}
+
+button {
+  background: black;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+#background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /*Alternate colors with black at the bottom when it rotates */
+  background-image: -webkit-linear-gradient(90deg, black, #F33CA4);
+  -webkit-transition: opacity ease 0.9s;
+  -moz-transition: opacity ease 0.9s;
+  -ms-transition: opacity ease 0.9s;
+  -o-transition: opacity ease 0.9s;
+  transition: opacity ease 0.9s;
+  /*Change color time */
+  -webkit-animation: hue 30s infinite linear;
+  opacity: .8;
+  z-index: -2;
+}
+
+/* Fade in and out */
+.fadeIn {
+  -webkit-animation: fadeIn 0.9s;
+}
+
+/* Rotate the colors */
+@-webkit-keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+
+  to {
+    /*     Looks like it circles if -360 */
+    -webkit-filter: hue-rotate(-360deg);
+  }
+}
+
+/* Add of css grids */
+body {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  background: #000;
+  /*Change the 'fov' */
+  background: url(http://i.imgur.com/8FAYZ8d.jpg) no-repeat center center fixed;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-perspective: 500px;
+  perspective: 500px;
+}
+
+.grid-top,
+.grid-bottom {
+  position: absolute;
+  z-index: -1;  /* to be below the parent element */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  background-size: 50px 50px;
+}
+
+#analyser_render {
+  top: 0;
+  position: absolute;
+  z-index: -2;
+}
+
+/* Copy and paste grid effect */
+.grid-top {
+  background-image: -webkit-linear-gradient(90deg, transparent 19%, rgba(24,255,255, 0.3) 24%, #18ffff 25%, #18ffff 26%, rgba(24,255,255, 0.3) 27%, transparent 32%, transparent 69%, rgba(24,255,255, 0.3) 74%, #18ffff 75%, #18ffff 76%, rgba(24,255,255, 0.3) 77%, transparent 82%, transparent), -webkit-linear-gradient(0deg, transparent 19%, rgba(24,255,255, 0.3) 24%, #18ffff 25%, #18ffff 26%, rgba(24,255,255, 0.3) 27%, transparent 32%, transparent 69%, rgba(24,255,255, 0.3) 74%, #18ffff 75%, #18ffff 76%, rgba(24,255,255, 0.3) 77%, transparent 82%, transparent);
+  background-image: linear-gradient(0deg, transparent 19%, rgba(24,255,255, 0.3) 24%, #18ffff 25%, #18ffff 26%, rgba(24,255,255, 0.3) 27%, transparent 32%, transparent 69%, rgba(24,255,255, 0.3) 74%, #18ffff 75%, #18ffff 76%, rgba(24,255,255, 0.3) 77%, transparent 82%, transparent), linear-gradient(90deg, transparent 19%, rgba(24,255,255, 0.3) 24%, #18ffff 25%, #18ffff 26%, rgba(24,255,255, 0.3) 27%, transparent 32%, transparent 69%, rgba(24,255,255, 0.3) 74%, #18ffff 75%, #18ffff 76%, rgba(24,255,255, 0.3) 77%, transparent 82%, transparent);
+  -webkit-transform: rotateX(-80deg) scale(2);
+  transform: rotateX(-80deg) scale(2);
+  -webkit-transform-origin: top center;
+  transform-origin: top center;
+  box-shadow: inset 0px -100px 100px 100px #000;
+  -webkit-animation: rad 1s reverse linear infinite;
+  animation: rad 1s reverse linear infinite;
+}
+
+/* Add grid to bottom */
+.grid-bottom {
+  background-image: -webkit-linear-gradient(90deg, transparent 19%, rgba(206,147,216, 0.3) 24%, #ce93d8 25%, #ce93d8 26%, rgba(206,147,216, 0.3) 27%, transparent 32%, transparent 69%, rgba(206,147,216, 0.3) 74%, #ce93d8 75%, #ce93d8 76%, rgba(206,147,216, 0.3) 77%, transparent 82%, transparent),
+  -webkit-linear-gradient(0deg, transparent 19%, rgba(206,147,216, 0.3) 24%, #ce93d8 25%, #ce93d8 26%, rgba(206,147,216, 0.3) 27%, transparent 32%, transparent 69%, rgba(206,147,216, 0.3) 74%, #ce93d8 75%, #ce93d8 76%, rgba(206,147,216, 0.3) 77%, transparent 82%, transparent);
+  background-image: linear-gradient(0deg, transparent 19%, rgba(206,147,216, 0.3) 24%, #ce93d8 25%, #ce93d8 26%, rgba(206,147,216, 0.3) 27%, transparent 32%, transparent 69%, rgba(206,147,216, 0.3) 74%, #ce93d8 75%, #ce93d8 76%, rgba(206,147,216, 0.3) 77%, transparent 82%, transparent),
+  linear-gradient(90deg, transparent 19%, rgba(206,147,216, 0.3) 24%, #ce93d8 25%, #ce93d8 26%, rgba(206,147,216, 0.3) 27%, transparent 32%, transparent 69%, rgba(206,147,216, 0.3) 74%, #ce93d8 75%, #ce93d8 76%, rgba(206,147,216, 0.3) 77%, transparent 82%, transparent);
+  -webkit-transform: rotateX(80deg) scale(2);
+  transform: rotateX(80deg) scale(2);
+  -webkit-transform-origin: bottom center;
+  transform-origin: bottom center;
+  /*   Make it looks like a grid */
+  box-shadow: inset 0px 100px 100px 100px #000;
+  -webkit-animation: rad 1s linear infinite;
+  animation: rad 1s linear infinite;
+}
+
+/* Set the speed of the grid, intervals of 50/25/etc */
+@-webkit-keyframes rad {
+  100% {
+    background-position: 0px 75px;
+  }
+}
+
+@keyframes rad {
+  100% {
+    background-position: 0px 75px;
+  }
+}
+
+
+div#mp3_player > div > audio {
+  /* background: black; */
+  /* float: left; */
+  width: 100%;
+}
+
+div#mp3_player > canvas {
+  width: 100%;
+  height: 100vh;
+  /* background: url("https://s32.postimg.org/esogqna8l/Disco_background.jpg"); */
+  /*background: url("https://s32.postimg.org/jjr4659bp/Twitter_background_retro_disco_pattern_backgroun.jpg");*/
+  /* background-position: center; */
+  /* background-size: cover; */
+  /* float: left; */
+}
