@@ -1,6 +1,12 @@
 # Pulse Express Music App
 
-## How to start the server and font end.
+## Hosted links:
+- Click the link for Darude.
+```
+https://historic-everglades-98686.herokuapp.com/
+```
+
+## How to start the server and font end locally.
 Load up terminal and go into your projects directory where you want to clone both of the repos.
 
 - Clone the front end.
