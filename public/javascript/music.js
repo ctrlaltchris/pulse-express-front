@@ -99,8 +99,11 @@ $.ajax({
   $('body').append(container); //lastly, append the container to the body tag for it to appear
   $('#new-form').hide();  //when new donut is created when user clicks create, hide the 'new form'
 }
+
 });
 });
+
+
   //-----------------VISUALS----------------
   var play = function(id) {
     var audio = new Audio();

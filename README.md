@@ -52,9 +52,9 @@ in your web browser.
 
 ## Technologies explored.
 - ~~Idea level was to use MEAN stack~~
-  - Time issue.
+  - Unsuccessful: Time issues.
 - ~~Angularjs~~
-  - Intelligence issues.
+  - Unsuccessful: Intelligence issues.
 - ~~Threejs~~
   - Need more experience.
 - First working version used Rails, Postgresql and Backbone.
@@ -66,9 +66,11 @@ in your web browser.
 _ We all initially thought that a front end heavy app would be useful in presenting our work.
 _ We wanted something simple that would be buildable in a week.
 _ We wanted something pretty and shiny.
+- We wanted to make something we'd use.
 
 ## Challenges:
-- Getting the visualizer and the css was tricky as it caused lag.
+- Git was troublesome with conflicts and user workflow.
+- Getting the visualizer and the css working together was tricky as it caused lag.
 
 
 ## Helpful links:
@@ -108,6 +110,7 @@ http://css3pie.com/demos/gradient-patterns/
 - Get the visualizer working in safari (9.1.1).
 - Redo audio elements with pretty alternatives.
 - Add album art to page.
+- Add an ability to delete files from Heroku (Not just the database).
 
 ## Layout ideas
 - User signin (initial load) screen.
