@@ -7,20 +7,21 @@ $('#mp3_player').hide();
 
 //-----DISPLAYING MUSIC LIST-----
 $.ajax({
-  url: "http://localhost:3000/api/",
+  url: "https://serene-wind-cave-24800.herokuapp.com/api/",
   type: "GET",
   dataType : "json",
   })
   .done(function( data ) {
     for(var i=0; i<data.length; i++){   //loops through data, and for each data, print out the following. Also pass the data's id to the container, edit, and delete button
     var id = $('<p>').text("Id:" + data[i]._id);
+
     var title = $('<p>').text("Title:" + data[i].originalname);
     var play = $('<button>').data('Data-id', data[i]._id).text('Play').off('click', stopSong).on('click', playSong); //creates edit button with donut id and carries a function editDonut in which we will define later
 
     // var edit = $('<button>').data('Donut-id', data[i].id).text('Edit').on('click', editDonut); //creates edit button with donut id and carries a function editDonut in which we will define later
     var del = $('<button>').data('Data-id', data[i]._id).text('Delete').on('click', deleteMusic);  //creates delete button with donut id and carries a function deleteDonut in which we will define later
     var container = $('<div>').attr('Data-id', data[i]._id);
-    $(container).append(id, title, play, del); //append all the paragraphs and buttons to a div container
+    $(container).append(title, play, del); //append all the paragraphs and buttons to a div container
     $('body').append(container) //lastly, append the container to the body tag for it to appear
   }
 });
@@ -28,7 +29,7 @@ $.ajax({
 function playSong() {
   var MusicId = $(this).data('Data-id');
   $.ajax({
-    url: 'http://localhost:3000/api/'+MusicId,
+    url: 'https://serene-wind-cave-24800.herokuapp.com/api/'+MusicId,
     method: 'GET',
     success: function(data){
 
@@ -59,7 +60,7 @@ function stopSong(){
 function deleteMusic(){
   var MusicId = $(this).data('Data-id');  //grab specific donut id from the 'delete button' (remember we passed it earlier when we created the button?)
   $.ajax({
-    url: 'http://localhost:3000/api/'+MusicId, //pass the DonutId variable you defined two lines above that carries the specific id
+    url: 'https://serene-wind-cave-24800.herokuapp.com/api/'+MusicId, //pass the DonutId variable you defined two lines above that carries the specific id
     method: 'DELETE',
     success: function(data){
       $('div[Data-id="'+MusicId+'"]').remove(); //remember your div container contains a specific id when we create it? we pass it the DonutId variable with specific id, so now it looks for a div with THAT id, then removes it entirely
@@ -78,33 +79,57 @@ function deleteMusic(){
 
   var formData = new FormData($('#new-form')[0]);
 
-  $.ajax({
-    url: 'http://localhost:3000/api/',
-    method: 'POST',
-    data: formData,
-    contentType: false,
-    processData: false,
-    mimeType: "multipart/form-data",
-    success: function(data){  //if successful upon grabbing data
-    var data = JSON.parse(data);
-    var id = $('<p>').text("Id:" + data._id);
-    var title = $('<p>').text("Title:" + data.originalname);
-    var play = $('<button>').data('Data-id', data._id).text('Play').on('click', playSong); //creates edit button with donut id and carries a function editDonut in which we will define later
+// <<<<<<< HEAD
+$.ajax({
+  url: 'https://serene-wind-cave-24800.herokuapp.com/api/',
+  method: 'POST',
+  data: formData,
+  contentType: false,
+  processData: false,
+  mimeType: "multipart/form-data",
+  success: function(data){  //if successful upon grabbing data
+  var data = JSON.parse(data);
+  var id = $('<p>').text("Id:" + data._id);
+  var title = $('<p>').text("Title:" + data.originalname);
+  var play = $('<button>').data('Data-id', data._id).text('Play').on('click', playSong); //creates edit button with donut id and carries a function editDonut in which we will define later
 
-    // var edit = $('<button>').data('Donut-id', data[i].id).text('Edit').on('click', editDonut); //creates edit button with donut id and carries a function editDonut in which we will define later
-    var del = $('<button>').data('Data-id', data._id).text('Delete').on('click', deleteMusic);  //creates delete button with donut id and carries a function deleteDonut in which we will define later
-    var container = $('<div>').attr('Data-id', data._id);
-    $(container).append(id, title, play, del); //append all the paragraphs and buttons to a div container
-    $('body').append(container) //lastly, append the container to the body tag for it to appear
-    $('#new-form').hide();  //when new donut is created when user clicks create, hide the 'new form'
-    }
+  // var edit = $('<button>').data('Donut-id', data[i].id).text('Edit').on('click', editDonut); //creates edit button with donut id and carries a function editDonut in which we will define later
+  var del = $('<button>').data('Data-id', data._id).text('Delete').on('click', deleteMusic);  //creates delete button with donut id and carries a function deleteDonut in which we will define later
+  var container = $('<div>').attr('Data-id', data._id);
+  $(container).append(id, title, play, del); //append all the paragraphs and buttons to a div container
+  $('body').append(container) //lastly, append the container to the body tag for it to appear
+  $('#new-form').hide();  //when new donut is created when user clicks create, hide the 'new form'
+}
+    })
+// =======
+//   $.ajax({
+//     url: 'http://localhost:3000/api/',
+//     method: 'POST',
+//     data: formData,
+//     contentType: false,
+//     processData: false,
+//     mimeType: "multipart/form-data",
+//     success: function(data){  //if successful upon grabbing data
+//     var data = JSON.parse(data);
+//     var id = $('<p>').text("Id:" + data._id);
+//     var title = $('<p>').text("Title:" + data.originalname);
+//     var play = $('<button>').data('Data-id', data._id).text('Play').on('click', playSong); //creates edit button with donut id and carries a function editDonut in which we will define later
+
+//     // var edit = $('<button>').data('Donut-id', data[i].id).text('Edit').on('click', editDonut); //creates edit button with donut id and carries a function editDonut in which we will define later
+//     var del = $('<button>').data('Data-id', data._id).text('Delete').on('click', deleteMusic);  //creates delete button with donut id and carries a function deleteDonut in which we will define later
+//     var container = $('<div>').attr('Data-id', data._id);
+//     $(container).append(id, title, play, del); //append all the paragraphs and buttons to a div container
+//     $('body').append(container) //lastly, append the container to the body tag for it to appear
+//     $('#new-form').hide();  //when new donut is created when user clicks create, hide the 'new form'
+//     }
+// >>>>>>> 6686da043968c35af214934ca8c153373c148cad
   })
 })
 
   //-----------------VISUALS----------------
   var play = function(id) {
     var audio = new Audio();
-    audio.src = 'http://localhost:3000/api/'+id+'/media';
+    audio.src = 'https://serene-wind-cave-24800.herokuapp.com/api/'+id+'/media';
     audio.controls = true;
     audio.loop = true;
     audio.autoplay = true;
