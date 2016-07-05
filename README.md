@@ -73,6 +73,7 @@ _ We all initially thought that a front end heavy app would be useful in present
 _ We wanted something simple that would be buildable in a week.
 _ We wanted something pretty and shiny.
 - We wanted to make something we'd use.
+![User stories](http://i.imgur.com/9IDKvJi.png)
 
 ## Challenges:
 - Git was troublesome with conflicts and user workflow.
