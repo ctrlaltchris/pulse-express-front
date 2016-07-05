@@ -3,7 +3,7 @@
 ## Hosted links:
 - Click the [link](https://historic-everglades-98686.herokuapp.com/music) for hosted site..
 ```
-[Darude](https://historic-everglades-98686.herokuapp.com/)
+![Darude](https://historic-everglades-98686.herokuapp.com/)
 ```
 
 ## How to start the server and font end locally.
@@ -76,6 +76,7 @@ in your web browser.
 - Below are out user stories:
 
 ![User stories](http://i.imgur.com/9IDKvJi.png)
+
 
 ## Challenges:
 - Github, Github and Github. Github was troublesome with conflicts and user workflow.
@@ -188,6 +189,8 @@ http://css3pie.com/demos/gradient-patterns/
 └──────────────────────────────────────────────────────────────────────┘
 ```
 
+![Layout approach](http://i.imgur.com/0yAn8ND.jpg)
+![Layout approach](http://i.imgur.com/0tjNK6I.jpg)
 
 ## Bugs:
 - Audio can stack and overlap.
