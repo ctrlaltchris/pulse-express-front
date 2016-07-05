@@ -97,7 +97,7 @@ $.ajax({
   var container = $('<div>').attr('Data-id', data._id);
   $(container).append(title, play, del); //append all the paragraphs and buttons to a div container
   $('body').append(container); //lastly, append the container to the body tag for it to appear
-  $('#new-form').hide();  //when new donut is created when user clicks create, hide the 'new form'
+  // $('#new-form').hide();  //when new donut is created when user clicks create, hide the 'new form'
 }
 
 });
