@@ -1,9 +1,9 @@
 # Pulse Express Music App
 
 ## Hosted links:
-- Click the link for Darude.
+- Click the [link](https://historic-everglades-98686.herokuapp.com/music) for hosted site..
 ```
-https://historic-everglades-98686.herokuapp.com/
+[Darude](https://historic-everglades-98686.herokuapp.com/)
 ```
 
 ## How to start the server and font end locally.
@@ -78,8 +78,9 @@ in your web browser.
 ![User stories](http://i.imgur.com/9IDKvJi.png)
 
 ## Challenges:
-- Git was troublesome with conflicts and user workflow.
-- Getting the visualizer and the css working together was tricky as it caused lag.
+- Github, Github and Github. Github was troublesome with conflicts and user workflow.
+- Getting the visualizer and the css working together was tricky as it caused a lot of lag.
+
 
 ## Helpful links:
 
@@ -192,4 +193,6 @@ http://css3pie.com/demos/gradient-patterns/
 - Audio can stack and overlap.
 - The scrubber for the timeline doesn't work as intended.
 - Will's computer runs the visualizers better than Chris and Joel's computer. Obvious bug.
+
+## Reflection:
 
