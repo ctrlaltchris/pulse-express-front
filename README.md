@@ -51,16 +51,53 @@ in your web browser.
 - Click the play button then the audio and visualizer will start playing.
 
 ## Technologies explored.
-* ~~Idea level was to use MEAN stack~~
-* ~~Angularjs~~
-
-* First working version used rails, postgresql and backbone.
-* Current working version uses Mongodb, ajax, express.
+- ~~Idea level was to use MEAN stack~~
+  - Time issue.
+- ~~Angularjs~~
+  - Intelligence issues.
+- ~~Threejs~~
+  - Need more experience.
+- First working version used Rails, Postgresql and Backbone.
+  - We were all comfortable and confident using rails.
+- Current working version uses Node, Express, Mongo, AJAX.
+  - After a week of new content we decided to replace rails with the those mention above to diversify some new skills.
 
 ## User stories:
-We all initially thought that a front end heavy app would be useful in presenting our work.
-We wanted something simple that would be buildable in a week.
-We wanted something pretty abd shiny.
+_ We all initially thought that a front end heavy app would be useful in presenting our work.
+_ We wanted something simple that would be buildable in a week.
+_ We wanted something pretty and shiny.
+
+## Challenges:
+- Getting the visualizer and the css was tricky as it caused lag.
+
+
+## Helpful links:
+
+- Multer for file uploads.
+```
+http://www.codingdefined.com/2016/01/file-upload-in-nodejs.html
+```
+
+- How to post files in ajax.
+```
+http://stackoverflow.com/questions/38156480/cannot-read-property-of-undefined-ajax-post
+```
+
+- Backend hosted on Heroku.
+```
+https://serene-wind-cave-24800.herokuapp.com/
+```
+
+- Hue information about changing colors.
+```
+https://developer.mozilla.org/en/docs/Web/CSS/filter
+```
+
+- Css grid drawing.
+```
+http://stackoverflow.com/questions/3540194/how-to-make-a-grid-like-graph-paper-grid-with-just-css
+http://css3pie.com/demos/gradient-patterns/
+```
 
 ## TODO:
 - Fix performance issues with the visualizer.
