@@ -22,7 +22,7 @@ $.ajax({
     var del = $('<button>').data('Data-id', data[i]._id).text('Delete').on('click', deleteMusic);  //creates delete button with donut id and carries a function deleteDonut in which we will define later
     var container = $('<div>').attr('Data-id', data[i]._id);
     $(container).append(title, play, del); //append all the paragraphs and buttons to a div container
-    $('body').append(container) //lastly, append the container to the body tag for it to appear
+    $('body').append(container); //lastly, append the container to the body tag for it to appear
   }
 });
 
@@ -38,7 +38,7 @@ function playSong() {
     },
     error: function(data) {
     }
-  })
+});
 }
 
 function stopSong(){
@@ -53,7 +53,7 @@ function stopSong(){
     },
     error: function(data) {
     }
-  })
+});
 }
 
 //-----DELETE MUSIC-----
@@ -68,7 +68,7 @@ function deleteMusic(){
     error: function(data) {
 
     }
-  })
+});
 }
 
 //-----CREATE MUSIC-----
@@ -79,7 +79,6 @@ function deleteMusic(){
 
   var formData = new FormData($('#new-form')[0]);
 
-<<<<<<< HEAD
 $.ajax({
   url: 'https://serene-wind-cave-24800.herokuapp.com/api/',
   method: 'POST',
@@ -97,35 +96,11 @@ $.ajax({
   var del = $('<button>').data('Data-id', data._id).text('Delete').on('click', deleteMusic);  //creates delete button with donut id and carries a function deleteDonut in which we will define later
   var container = $('<div>').attr('Data-id', data._id);
   $(container).append(id, title, play, del); //append all the paragraphs and buttons to a div container
-  $('body').append(container) //lastly, append the container to the body tag for it to appear
+  $('body').append(container); //lastly, append the container to the body tag for it to appear
   $('#new-form').hide();  //when new donut is created when user clicks create, hide the 'new form'
 }
-    })
-=======
-  $.ajax({
-    url: 'http://localhost:3000/api/',
-    method: 'POST',
-    data: formData,
-    contentType: false,
-    processData: false,
-    mimeType: "multipart/form-data",
-    success: function(data){  //if successful upon grabbing data
-    var data = JSON.parse(data);
-    var id = $('<p>').text("Id:" + data._id);
-    var title = $('<p>').text("Title:" + data.originalname);
-    var play = $('<button>').data('Data-id', data._id).text('Play').on('click', playSong); //creates edit button with donut id and carries a function editDonut in which we will define later
-
-    // var edit = $('<button>').data('Donut-id', data[i].id).text('Edit').on('click', editDonut); //creates edit button with donut id and carries a function editDonut in which we will define later
-    var del = $('<button>').data('Data-id', data._id).text('Delete').on('click', deleteMusic);  //creates delete button with donut id and carries a function deleteDonut in which we will define later
-    var container = $('<div>').attr('Data-id', data._id);
-    $(container).append(id, title, play, del); //append all the paragraphs and buttons to a div container
-    $('body').append(container) //lastly, append the container to the body tag for it to appear
-    $('#new-form').hide();  //when new donut is created when user clicks create, hide the 'new form'
-    }
->>>>>>> 6686da043968c35af214934ca8c153373c148cad
-  })
-})
-
+});
+});
   //-----------------VISUALS----------------
   var play = function(id) {
     var audio = new Audio();
@@ -133,7 +108,7 @@ $.ajax({
     audio.controls = true;
     audio.loop = true;
     audio.autoplay = true;
-    audio.crossOrigin = 'anonymous'
+    audio.crossOrigin = 'anonymous';
 
     //establish all variables that analyser will Use
     var canvas, ctx, source, context, analyser, fbc_array, bars, bar_x, bar_width, bar_height;
@@ -142,8 +117,7 @@ $.ajax({
 
     initMp3Player();
 
-    console.log('playing music'
-    )
+    console.log('playing music');
     function initMp3Player(){
 
 
@@ -183,10 +157,6 @@ $.ajax({
           ctx.fillRect(bar_x, canvas.height, bar_width, bar_height);
         }
       }
-
-
-
-
     }
-  }
+};
 });
