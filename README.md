@@ -62,11 +62,11 @@ in your web browser.
 - ~~Angularjs~~
   - Unsuccessful: Intelligence issues.
 - ~~Threejs~~
-  - Need more experience.
+  - Need more experience to understand some of the concepts.
 - First working version used Rails, Postgresql and Backbone.
   - We were all comfortable and confident using rails.
 - Current working version uses Node, Express, Mongo, AJAX.
-  - After a week of new content we decided to replace rails with the those mention above to diversify some new skills.
+  - After a week of new content we decided to replace rails with the technologies mentioned above to diversify some new skills.
 
 ## User stories:
 - We all initially thought that a front end heavy app would be useful in presenting our work.
@@ -121,6 +121,7 @@ http://css3pie.com/demos/gradient-patterns/
 - Redo audio elements with pretty alternatives.
 - Add album art to page.
 - Add an ability to delete files from Heroku (Not just the database).
+- Add a public private flag.
 
 ## Layout ideas
 - User signin (initial load) screen.
@@ -196,6 +197,11 @@ http://css3pie.com/demos/gradient-patterns/
 - Audio can stack and overlap.
 - The scrubber for the timeline doesn't work as intended.
 - Will's computer runs the visualizers better than Chris and Joel's computer. Obvious bug.
+- Anyone can delete anything (if they're logged in).
+  - We need a related usermodel.
 
 ## Reflection:
+- We need to go over Github branching more to avoid conflicts.
+- We think the app has a few glaring bugs but will be fixed with a bit more time.
+- We would have liked to integrate Facebook login alongside the Github login.
 
