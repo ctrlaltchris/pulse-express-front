@@ -73,13 +73,13 @@ in your web browser.
 - We wanted something simple that would be buildable in a week.
 - We wanted something pretty and shiny.
 - We wanted to make something we'd use.
+- Below are out user stories:
 
 ![User stories](http://i.imgur.com/9IDKvJi.png)
 
 ## Challenges:
 - Git was troublesome with conflicts and user workflow.
 - Getting the visualizer and the css working together was tricky as it caused lag.
-
 
 ## Helpful links:
 
