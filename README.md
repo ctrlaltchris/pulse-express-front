@@ -2,9 +2,6 @@
 
 ## Hosted links:
 - Click the [link](https://historic-everglades-98686.herokuapp.com/music) for hosted site..
-```
-![Darude](https://historic-everglades-98686.herokuapp.com/)
-```
 
 ## How to start the server and font end locally.
 Load up terminal and go into your projects directory where you want to clone both of the repos.
