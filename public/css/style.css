@@ -6,20 +6,23 @@ body {
     background-size: cover;
 }
 
-i {
+/*i {
     color: white;
     padding-top: 5px;
-}
+}*/
 
-.nav {
+/*.nav {
     background-color: #2C2C2C;
     height: 40px;
     text-align: right;
     padding-right: 10px;
-}
-
+}*/
 
 //-------------/MUSIC--------------
+
+.brand-logo {
+    font-family: VT323;
+}
 
 #new-form {
     text-align: left;

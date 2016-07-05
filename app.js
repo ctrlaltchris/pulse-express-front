@@ -34,6 +34,7 @@ app.get('/', function (req, res) {
     // }
 
   // res.send(html);
+
 });
 
 app.get('/logout', function(req, res){
@@ -67,7 +68,7 @@ function ensureAuthenticated(req, res, next) {
 }
 
 app.get('/music', ensureAuthenticated, function(req, res) {
-  res.render('music');
+    res.render('music', {user: req.user});
 });
 
 
