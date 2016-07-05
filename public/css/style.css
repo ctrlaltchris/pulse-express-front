@@ -117,7 +117,7 @@ body {
   z-index: -2;
 }
 
-/* Copy and paste grid effect */
+/* Grid effect */
 .grid-top {
   background-image: -webkit-linear-gradient(90deg, transparent 19%, rgba(24,255,255, 0.3) 24%, #18ffff 25%, #18ffff 26%, rgba(24,255,255, 0.3) 27%, transparent 32%, transparent 69%, rgba(24,255,255, 0.3) 74%, #18ffff 75%, #18ffff 76%, rgba(24,255,255, 0.3) 77%, transparent 82%, transparent), -webkit-linear-gradient(0deg, transparent 19%, rgba(24,255,255, 0.3) 24%, #18ffff 25%, #18ffff 26%, rgba(24,255,255, 0.3) 27%, transparent 32%, transparent 69%, rgba(24,255,255, 0.3) 74%, #18ffff 75%, #18ffff 76%, rgba(24,255,255, 0.3) 77%, transparent 82%, transparent);
   background-image: linear-gradient(0deg, transparent 19%, rgba(24,255,255, 0.3) 24%, #18ffff 25%, #18ffff 26%, rgba(24,255,255, 0.3) 27%, transparent 32%, transparent 69%, rgba(24,255,255, 0.3) 74%, #18ffff 75%, #18ffff 76%, rgba(24,255,255, 0.3) 77%, transparent 82%, transparent), linear-gradient(90deg, transparent 19%, rgba(24,255,255, 0.3) 24%, #18ffff 25%, #18ffff 26%, rgba(24,255,255, 0.3) 27%, transparent 32%, transparent 69%, rgba(24,255,255, 0.3) 74%, #18ffff 75%, #18ffff 76%, rgba(24,255,255, 0.3) 77%, transparent 82%, transparent);
