@@ -16,7 +16,7 @@ $.ajax({
     var id = $('<p>').text("Id:" + data[i]._id);
 
     var title = $('<p>').text("Title:" + data[i].originalname);
-    var play = $('<button>').data('Data-id', data[i]._id).text('Play').off('click', stopSong).on('click', playSong); //creates edit button with donut id and carries a function editDonut in which we will define later
+    var play = $('<button>').data('Data-id', data[i]._id).attr('class', "waves-effect waves-light black btn").text('<i class="material-icons">play_circle_outline</i>').off('click', stopSong).on('click', playSong); //creates edit button with donut id and carries a function editDonut in which we will define later
 
     // var edit = $('<button>').data('Donut-id', data[i].id).text('Edit').on('click', editDonut); //creates edit button with donut id and carries a function editDonut in which we will define later
     var del = $('<button>').data('Data-id', data[i]._id).text('Delete').on('click', deleteMusic);  //creates delete button with donut id and carries a function deleteDonut in which we will define later
@@ -95,7 +95,7 @@ $.ajax({
   // var edit = $('<button>').data('Donut-id', data[i].id).text('Edit').on('click', editDonut); //creates edit button with donut id and carries a function editDonut in which we will define later
   var del = $('<button>').data('Data-id', data._id).text('Delete').on('click', deleteMusic);  //creates delete button with donut id and carries a function deleteDonut in which we will define later
   var container = $('<div>').attr('Data-id', data._id);
-  $(container).append(id, title, play, del); //append all the paragraphs and buttons to a div container
+  $(container).append(title, play, del); //append all the paragraphs and buttons to a div container
   $('body').append(container); //lastly, append the container to the body tag for it to appear
   $('#new-form').hide();  //when new donut is created when user clicks create, hide the 'new form'
 }
@@ -147,7 +147,7 @@ $.ajax({
         fbc_array = new Uint8Array(analyser.frequencyBinCount);
         analyser.getByteFrequencyData(fbc_array);
         ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear the canvas
-        ctx.fillStyle = 'rgba(240,98,146,0.4)'; // Color of the bars
+        ctx.fillStyle = 'rgba(171, 71, 188, 0.4)'; // Color of the bars
         bars = 1000;
         for (var i = 0; i < bars; i++) {
           bar_x = i * 4;
