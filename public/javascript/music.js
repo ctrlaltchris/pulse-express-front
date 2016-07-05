@@ -16,7 +16,7 @@ $.ajax({
     var id = $('<p>').text("Id:" + data[i]._id);
 
     var title = $('<p>').text("Title:" + data[i].originalname);
-    var play = $('<button>').data('Data-id', data[i]._id).attr('class', "waves-effect waves-light black btn").text('<i class="material-icons">play_circle_outline</i>').off('click', stopSong).on('click', playSong); //creates edit button with donut id and carries a function editDonut in which we will define later
+    var play = $('<button>').data('Data-id', data[i]._id).text('Play').off('click', stopSong).on('click', playSong); //creates edit button with donut id and carries a function editDonut in which we will define later
 
     // var edit = $('<button>').data('Donut-id', data[i].id).text('Edit').on('click', editDonut); //creates edit button with donut id and carries a function editDonut in which we will define later
     var del = $('<button>').data('Data-id', data[i]._id).text('Delete').on('click', deleteMusic);  //creates delete button with donut id and carries a function deleteDonut in which we will define later
