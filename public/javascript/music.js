@@ -80,6 +80,10 @@ function deleteMusic(){
   var formData = new FormData($('#new-form')[0]);
 
 // <<<<<<< HEAD
+// <<<<<<< HEAD
+// =======
+// <<<<<<< HEAD
+// >>>>>>> master
 $.ajax({
   url: 'https://serene-wind-cave-24800.herokuapp.com/api/',
   method: 'POST',
@@ -101,6 +105,7 @@ $.ajax({
   $('#new-form').hide();  //when new donut is created when user clicks create, hide the 'new form'
 }
     })
+// <<<<<<< HEAD
 // =======
 //   $.ajax({
 //     url: 'http://localhost:3000/api/',
@@ -123,6 +128,30 @@ $.ajax({
 //     $('#new-form').hide();  //when new donut is created when user clicks create, hide the 'new form'
 //     }
 // >>>>>>> 6686da043968c35af214934ca8c153373c148cad
+// =======
+// =======
+  // $.ajax({
+  //   url: 'http://localhost:3000/api/',
+  //   method: 'POST',
+  //   data: formData,
+  //   contentType: false,
+  //   processData: false,
+  //   mimeType: "multipart/form-data",
+  //   success: function(data){  //if successful upon grabbing data
+  //   var data = JSON.parse(data);
+  //   var id = $('<p>').text("Id:" + data._id);
+  //   var title = $('<p>').text("Title:" + data.originalname);
+  //   var play = $('<button>').data('Data-id', data._id).text('Play').on('click', playSong); //creates edit button with donut id and carries a function editDonut in which we will define later
+
+  //   // var edit = $('<button>').data('Donut-id', data[i].id).text('Edit').on('click', editDonut); //creates edit button with donut id and carries a function editDonut in which we will define later
+  //   var del = $('<button>').data('Data-id', data._id).text('Delete').on('click', deleteMusic);  //creates delete button with donut id and carries a function deleteDonut in which we will define later
+  //   var container = $('<div>').attr('Data-id', data._id);
+  //   $(container).append(id, title, play, del); //append all the paragraphs and buttons to a div container
+  //   $('body').append(container) //lastly, append the container to the body tag for it to appear
+  //   $('#new-form').hide();  //when new donut is created when user clicks create, hide the 'new form'
+  //   }
+// >>>>>>> 6686da043968c35af214934ca8c153373c148cad
+// >>>>>>> master
   })
 })
 

@@ -2,15 +2,34 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>pulse || radio</title>
     <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
     <script src="./javascript/music.js"></script>
-    <!-- <script src="visuals.js"></script> -->
-    <link rel="stylesheet" href="./css/style.css">
     <!-- Pixel font -->
     <link href='https://fonts.googleapis.com/css?family=VT323' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
   </head>
   <body>
+      <div class="navbar-fixed">
+        <nav>
+          <div class="nav-wrapper grey darken-4">
+              <form class="left"id="new-form">
+                  <input id="file" type="file" name="uploads">
+                  <button id="upload" class="waves-effect waves-light btn purple">Upload</button>
+                </form>
+              <!-- <ul class="left hide-on-med-and-down">
+                <li><a href="/upload" class="waves-effect waves-light btn purple lighten-1">Upload</a></li>
+              </ul> -->
+            <a href="#!" class="brand-logo center">Welcome, <%= user.username %></a>
+            <ul class="right hide-on-med-and-down">
+              <li><a href="/logout" class="waves-effect waves-light btn purple">Logout</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
 
     <!-- for the color changing part -->
     <!-- color change on the (non audio pages) - just kills the ram -->
@@ -29,11 +48,11 @@
       <div id="audio_box"></div>
       <canvas id="analyser_render"></canvas>
     </div>
-
+<!--
     <form id="new-form">
-      <input id="file" type="file" name="uploads">
-      <button id="upload">Upload</button>
-    </form>
+        <input id="file" type="file" name="uploads">
+        <button id="upload">Upload</button>
+      </form> -->
 
   </body>
 </html>
