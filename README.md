@@ -69,10 +69,11 @@ in your web browser.
   - After a week of new content we decided to replace rails with the those mention above to diversify some new skills.
 
 ## User stories:
-_ We all initially thought that a front end heavy app would be useful in presenting our work.
-_ We wanted something simple that would be buildable in a week.
-_ We wanted something pretty and shiny.
+- We all initially thought that a front end heavy app would be useful in presenting our work.
+- We wanted something simple that would be buildable in a week.
+- We wanted something pretty and shiny.
 - We wanted to make something we'd use.
+
 ![User stories](http://i.imgur.com/9IDKvJi.png)
 
 ## Challenges:
