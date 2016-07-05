@@ -196,6 +196,7 @@ http://css3pie.com/demos/gradient-patterns/
 - Will's computer runs the visualizers better than Chris and Joel's computer. Obvious bug.
 - Anyone can delete anything (if they're logged in).
   - We need a related usermodel.
+- heroku deletes the files after about 5 minutes so it breaks existing links.
 
 ## Reflection:
 - We need to go over Github branching more to avoid conflicts.
